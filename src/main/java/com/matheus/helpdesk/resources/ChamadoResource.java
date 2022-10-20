@@ -45,5 +45,4 @@ public class ChamadoResource {
         Chamado newObj = service.update(id, objDTO);
         return ResponseEntity.ok().body(new ChamadoDTO(newObj));
     }
-
 }
