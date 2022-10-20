@@ -16,8 +16,6 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Date;
 
-import static org.springframework.http.converter.json.Jackson2ObjectMapperBuilder.json;
-
 public class JWTAuthenticationFilter extends UsernamePasswordAuthenticationFilter {
 
     private AuthenticationManager authenticationManager;
@@ -58,11 +56,11 @@ public class JWTAuthenticationFilter extends UsernamePasswordAuthenticationFilte
 
     private CharSequence json(){
         long date = new Date().getTime();
-        return  "{"
-                +"\"timestamp\": " + date + ","
-                +"\"status\": 401, "
-                +"\"error\": \"Não autorizado\", "
-                +"\"message\": \"Email ou senha invalidos\", "
-                +"\"path\": \"/login\"}";
+        return "{"
+                + "\"timestamp\": " + date + ", "
+                + "\"status\": 401, "
+                + "\"error\": \"Não autorizado\", "
+                + "\"message\": \"Email ou senha inválidos\", "
+                + "\"path\": \"/login\"}";
     }
 }
