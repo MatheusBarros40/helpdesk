@@ -12,6 +12,7 @@ import com.matheus.helpdesk.service.exceptions.ObjectNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import javax.validation.Valid;
 import java.util.List;
 import java.util.Optional;
 
@@ -36,6 +37,13 @@ public class ChamadoService {
 
     public Chamado create(ChamadoDTO objDTO) {
         return repository.save(newChamado(objDTO));
+    }
+
+    public Chamado update(Integer id, @Valid ChamadoDTO objDTO){
+        objDTO.setId(id);
+        Chamado oldObj = findById(id);
+        oldObj = newChamado(objDTO);
+        return repository.save(oldObj);
     }
     private Chamado newChamado(ChamadoDTO obj){
         Tecnico tecnico = tecnicoService.findById(obj.getTecnico());
