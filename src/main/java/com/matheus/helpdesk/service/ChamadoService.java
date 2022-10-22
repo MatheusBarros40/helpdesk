@@ -7,7 +7,6 @@ import com.matheus.helpdesk.domain.dto.ChamadoDTO;
 import com.matheus.helpdesk.domain.enums.Prioridade;
 import com.matheus.helpdesk.domain.enums.Status;
 import com.matheus.helpdesk.repositories.ChamadoRepository;
-import com.matheus.helpdesk.resources.ChamadoResource;
 import com.matheus.helpdesk.service.exceptions.ObjectNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

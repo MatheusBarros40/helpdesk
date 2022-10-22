@@ -19,11 +19,11 @@ public class ChamadoDTO implements Serializable {
     private Integer prioridade;
     @NotNull(message = "O campo STATUS é requerido")
     private Integer status;
-    @NotNull(message = "O campo TITULO é requerido")
+    @NotNull(message = "O campo TÍTULO é requerido")
     private String titulo;
-    @NotNull(message = "O campo OBSERVACOES é requerido")
+    @NotNull(message = "O campo OBSERVAÇÕES é requerido")
     private String observacoes;
-    @NotNull(message = "O campo TECNICO é requerido")
+    @NotNull(message = "O campo TÉCNICO é requerido")
     private Integer tecnico;
     @NotNull(message = "O campo CLIENTE é requerido")
     private Integer cliente;

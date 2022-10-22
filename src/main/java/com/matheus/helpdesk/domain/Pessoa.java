@@ -14,6 +14,7 @@ import java.util.stream.Collectors;
 @Entity
 public abstract class Pessoa implements Serializable {
     private static final long serialVersionUID = 1L;
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     protected Integer id;
@@ -36,6 +37,7 @@ public abstract class Pessoa implements Serializable {
     }
 
     public Pessoa(Integer id, String nome, String cpf, String email, String senha) {
+        super();
         this.id = id;
         this.nome = nome;
         this.cpf = cpf;

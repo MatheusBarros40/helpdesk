@@ -12,6 +12,7 @@ public class FieldMessage implements Serializable {
      super();
     }
     public FieldMessage(String fieldName, String message) {
+        super();
         this.fieldName = fieldName;
         this.message = message;
     }
